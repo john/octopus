@@ -1,5 +1,12 @@
 require 'active_support/deprecation'
 
+module ActiveRecord
+  class Base
+    def set_table_name
+    end
+  end
+end
+
 module Octopus::Model
   def self.extended(base)
     base.send(:include, InstanceMethods)
