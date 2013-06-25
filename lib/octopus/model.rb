@@ -133,7 +133,7 @@ module Octopus::Model
         attr_accessor :custom_octopus_connection
         attr_accessor :custom_octopus_table_name
 
-        # alias_method_chain(:set_table_name, :octopus)
+        alias_method_chain(:set_table_name, :octopus)
 
         if Octopus.rails32?
           def table_name=(value = nil)
